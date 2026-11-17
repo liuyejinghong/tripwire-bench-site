@@ -1,0 +1,26 @@
+name: 题目投稿登记 / Task proposal
+description: 登记一道量化交易领域的脱敏实战题目。不要在这里贴题目内容。/ Register a sanitized task. Do not paste task content here.
+title: "[投稿] "
+body:
+  - type: input
+    id: topic
+    attributes:
+      label: 题材（一句话）/ Topic (one sentence)
+      description: 例如“重启后把旧轮次的止损状态当作当前事实”。/ e.g. "stale stop-loss state trusted after restart".
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 题型 / Task type
+      multiple: true
+      options: [修复 Fix, 审查 Review, 优化 Optimize]
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认 / Confirm
+      options:
+        - label: 题目已脱敏，不含密钥、账户、真实持仓或可识别的私有代码。/ The task is sanitized.
+          required: true
+        - label: 我会把材料放进自己的私有仓库，并邀请 @liuyejinghong 为协作者。/ I will share it via my own private repository.
+          required: true
