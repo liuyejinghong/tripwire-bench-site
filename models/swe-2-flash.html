@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>SWE-2 Flash · Tripwire Bench</title>
+<meta name="description" content="量化交易系统 coding benchmark：用真实事故重建的题目，衡量哪个模型最适合实现和维护交易系统。" data-i18n-content="page.description">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">跳到正文</a>
+<div class="page">
+
+      <header class="masthead">
+        <div class="brand">
+          <div class="brand-title"><a class="brand-link" href="../index.html"><span data-i18n="brand.name">Tripwire Bench</span></a><span class="brand-alias" data-i18n="brand.alias">踩雷榜</span></div>
+          <p class="brand-subtitle" data-i18n="brand.subtitle">量化交易系统 coding benchmark——哪个模型最适合写交易系统</p>
+        </div>
+        <div class="controls">
+          
+          <div class="control"><span data-i18n="controls.language">语言</span><div class="lang-switch" role="group" aria-label="切换语言" data-i18n-aria="controls.language_aria"><button type="button" class="lang-button" data-lang="zh" aria-pressed="true">中文</button><button type="button" class="lang-button" data-lang="en" aria-pressed="false">English</button></div></div>
+        </div>
+      </header>
+    <nav class="site-nav" aria-label="主导航" data-i18n-aria="nav.label"><a href="../index.html" data-i18n="nav.home">首页</a><a href="../leaderboard.html" data-i18n="nav.leaderboard">排行榜</a><a href="index.html" aria-current="page" data-i18n="nav.models">模型</a><a href="../compare.html" data-i18n="nav.compare">对比</a><a href="../methodology.html" data-i18n="nav.methodology">方法</a><a href="../contribute.html" data-i18n="nav.contribute">贡献题目</a></nav><div class="updated-line"><span data-i18n="meta.updated">更新于</span> <time datetime="2026-11-17">2026-11-17</time></div>
+<main id="main">
+      <header class="model-head">
+        <h1 class="model-title"><span class="model-swatch" style="background:#d1a44e" aria-hidden="true"></span>SWE-2 Flash</h1>
+        <p class="model-meta"><span>Cognition</span><span class="sep">·</span>
+          <span data-i18n="model.latest">最新成绩版本</span>
+          <span class="num">0.2.0</span><span class="sep">·</span>
+          <a href="index.html" data-i18n="model.back">全部模型</a></p>
+      </header>
+
+      <section class="report-section" id="scores">
+        <div class="section-head"><h2 data-i18n="model.summary.title">各项得分与名次</h2><p class="section-note" data-i18n="model.summary.note">名次来自该版本同一指标已测模型的排序；总分名次只统计五项指标齐全的模型。</p></div>
+        
+      <table class="metric-table">
+        <caption class="sr-only" data-i18n="model.summary.caption">该模型在最新成绩版本的各项得分与名次。</caption>
+        <colgroup><col class="metric-col-name"><col class="metric-col-score"><col class="metric-col-rank"></colgroup>
+        <thead><tr>
+          <th data-i18n="model.col.metric">指标</th>
+          <th class="num" data-i18n="model.col.score">得分</th>
+          <th class="num" data-i18n="model.col.rank">名次</th>
+        </tr></thead>
+        <tbody><tr class="total-row"><th scope="row" data-i18n="table.total">总分</th><td class="num">0.634</td><td class="num">4</td></tr><tr><th scope="row" data-i18n="component.fix_guided">修复 有提示</th><td class="num">0.556</td><td class="num">4</td></tr><tr><th scope="row" data-i18n="component.fix_open">修复 无提示</th><td class="num">0.778</td><td class="num">3</td></tr><tr><th scope="row" data-i18n="component.review_guided">审查 有提示</th><td class="num">0.881</td><td class="num">4</td></tr><tr><th scope="row" data-i18n="component.review_open">审查 无提示</th><td class="num">0.622</td><td class="num">4</td></tr><tr><th scope="row" data-i18n="component.optimize">优化</th><td class="num">0.333</td><td class="num">1</td></tr></tbody>
+      </table>
+    
+        <p class="model-seconds"><span data-i18n="detail.seconds">每题耗时</span>:
+          <span class="num">257</span>
+          <span class="unit" data-i18n="unit.second">秒</span>
+          <span class="sep">·</span>
+          <span data-i18n="model.seconds_note">含服务限流</span></p>
+      </section>
+
+      <section class="report-section" id="cost">
+        <div class="section-head"><h2 data-i18n="model.cost.title">成本构成</h2><p class="section-note" data-i18n="model.cost.note">按官方单价折算的每题平均成本，不是实际支出；只算答题模型，不含评分模型。</p></div>
+        
+      <table class="cost-table">
+        <caption class="sr-only" data-i18n="model.cost.caption">该模型每题的 token 用量与成本构成。</caption>
+        <colgroup>
+          <col class="cost-col-class"><col class="cost-col-tokens">
+          <col class="cost-col-price"><col class="cost-col-usd">
+        </colgroup>
+        <thead><tr>
+          <th data-i18n="model.cost.class">类别</th>
+          <th class="num" data-i18n="model.cost.tokens">token/题</th>
+          <th class="num" data-i18n="model.cost.price">单价（美元/百万 token）</th>
+          <th class="num" data-i18n="model.cost.usd">美元/题</th>
+        </tr></thead>
+        <tbody><tr><th scope="row" data-i18n="detail.token_input">输入</th><td class="num">41,622</td><td class="num">0.1</td><td class="num">0.00416</td></tr><tr><th scope="row" data-i18n="detail.token_output">输出</th><td class="num">18,995</td><td class="num">0.5</td><td class="num">0.0095</td></tr><tr><th scope="row" data-i18n="detail.token_cache_read">缓存读取</th><td class="num">1,793,902</td><td class="num">0.01</td><td class="num">0.0179</td></tr><tr><th scope="row" data-i18n="detail.token_cache_write">缓存写入</th><td class="num">0</td><td class="num">0.125</td><td class="num">0</td></tr>
+          <tr class="total-row"><th scope="row" data-i18n="model.cost.total">合计</th>
+            <td class="num">1,854,519</td><td class="num">—</td>
+            <td class="num">0.0316</td></tr>
+        </tbody>
+      </table>
+    
+        <p class="model-sources"><span data-i18n="model.sources">官方单价来源</span>:
+          <a href="https://docs.devin.ai/windsurf/plugins/cascade/models">https://docs.devin.ai/windsurf/plugins/cascade/models</a> <a href="https://docs.devin.ai/desktop/models">https://docs.devin.ai/desktop/models</a> <a href="https://cognition.com/blog/swe-2-flash">https://cognition.com/blog/swe-2-flash</a></p>
+      </section>
+
+      <section class="report-section" id="versions">
+        <div class="section-head"><h2 data-i18n="model.versions.title">各题库版本成绩</h2><p class="section-note" data-i18n="model.versions.note">同一模型在不同题库版本之间不直接比较。</p></div>
+        
+      <table class="version-table">
+        <caption class="sr-only" data-i18n="model.versions.caption">该模型在各题库版本的总分、名次、分项、耗时与成本。</caption>
+        <thead><tr>
+          <th data-i18n="model.versions.metric">指标</th>
+          <th class="num version-head">0.2.0</th><th class="num version-head">0.1.0</th>
+        </tr></thead>
+        <tbody><tr><th scope="row" data-i18n="table.total">总分</th><td class="num">0.634</td><td class="num">0.920</td></tr><tr><th scope="row" data-i18n="table.rank">名次</th><td class="num">4</td><td class="num">3</td></tr><tr><th scope="row" data-i18n="component.fix_guided">修复 有提示</th><td class="num">0.556</td><td class="num">1.000</td></tr><tr><th scope="row" data-i18n="component.fix_open">修复 无提示</th><td class="num">0.778</td><td class="num">1.000</td></tr><tr><th scope="row" data-i18n="component.review_guided">审查 有提示</th><td class="num">0.881</td><td class="num">0.900</td></tr><tr><th scope="row" data-i18n="component.review_open">审查 无提示</th><td class="num">0.622</td><td class="num">0.700</td></tr><tr><th scope="row" data-i18n="component.optimize">优化</th><td class="num">0.333</td><td class="num">1.000</td></tr><tr><th scope="row" data-i18n="table.seconds">每题耗时（秒）</th><td class="num">257</td><td class="num"><span class="missing" data-i18n="missing.untested">未测</span></td></tr><tr><th scope="row" data-i18n="chart.cost_usd.title">每题美元成本</th><td class="num">0.0316</td><td class="num"><span class="missing" data-i18n="missing.untested">未测</span></td></tr></tbody>
+      </table>
+    
+      </section>
+    </main>
+
+      <footer class="page-footer">
+        <div>
+          <span class="footer-label" data-i18n="footer.matrix">同一作者的其他项目</span>
+          <p><a href="https://github.com/liuyejinghong/field-lab"><strong data-i18n="footer.fieldlab.name">实战工坊 Field Lab</strong></a>
+            <span data-i18n="footer.fieldlab.desc">从实战中整理出的通用 Agent 工具，例如代码审查标准、可维护性记分卡。</span></p>
+          <p><a href="https://github.com/liuyejinghong/field-lab" class="footer-link" data-i18n="footer.fieldlab.link">github.com/liuyejinghong/field-lab</a></p>
+        </div>
+        <div class="footer-note">
+          <p data-i18n="footer.private">题目与评分材料不公开，避免进入训练数据或被针对性优化。</p>
+          <p class="footer-version"><span data-i18n="footer.site_version">网站</span> v1.0.0 · <span data-i18n="footer.bench_version">题库</span> 0.2.0</p>
+        </div>
+      </footer>
+    </div>
+<script src="../assets/i18n.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

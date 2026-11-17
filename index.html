@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title data-i18n="page.title">Tripwire Bench · 踩雷榜</title>
+<meta name="description" content="量化交易系统 coding benchmark：用真实事故重建的题目，衡量哪个模型最适合实现和维护交易系统。" data-i18n-content="page.description">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">跳到正文</a>
+<div class="page">
+
+      <header class="masthead">
+        <div class="brand">
+          <div class="brand-title"><a class="brand-link" href="index.html"><span data-i18n="brand.name">Tripwire Bench</span></a><span class="brand-alias" data-i18n="brand.alias">踩雷榜</span></div>
+          <p class="brand-subtitle" data-i18n="brand.subtitle">量化交易系统 coding benchmark——哪个模型最适合写交易系统</p>
+        </div>
+        <div class="controls">
+          
+          <div class="control"><span data-i18n="controls.language">语言</span><div class="lang-switch" role="group" aria-label="切换语言" data-i18n-aria="controls.language_aria"><button type="button" class="lang-button" data-lang="zh" aria-pressed="true">中文</button><button type="button" class="lang-button" data-lang="en" aria-pressed="false">English</button></div></div>
+        </div>
+      </header>
+    <nav class="site-nav" aria-label="主导航" data-i18n-aria="nav.label"><a href="index.html" aria-current="page" data-i18n="nav.home">首页</a><a href="leaderboard.html" data-i18n="nav.leaderboard">排行榜</a><a href="models/index.html" data-i18n="nav.models">模型</a><a href="compare.html" data-i18n="nav.compare">对比</a><a href="methodology.html" data-i18n="nav.methodology">方法</a><a href="contribute.html" data-i18n="nav.contribute">贡献题目</a></nav><div class="updated-line"><span data-i18n="meta.updated">更新于</span> <time datetime="2026-11-17">2026-11-17</time></div>
+<main id="main">
+      <h1 class="sr-only" data-i18n="page.home.h1">Tripwire Bench · 踩雷榜</h1>
+      <div class="ticker"><div class="ticker-item"><span class="ticker-label" data-i18n="ticker.quality">总分最高</span><span class="ticker-line"><span class="ticker-model">GLM-5.3 Flash</span><span class="ticker-value">0.724</span><span class="ticker-unit" data-i18n="unit.score">分</span></span></div><div class="ticker-item"><span class="ticker-label" data-i18n="ticker.cost">成本最低</span><span class="ticker-line"><span class="ticker-model">HY4 Flash</span><span class="ticker-value">0.00912</span><span class="ticker-unit" data-i18n="unit.usd_task">美元/题</span></span></div><div class="ticker-item"><span class="ticker-label" data-i18n="ticker.time">耗时最短</span><span class="ticker-line"><span class="ticker-model">HY4 Flash</span><span class="ticker-value">149</span><span class="ticker-unit" data-i18n="unit.seconds_task">秒/题</span></span></div></div>
+      <div class="hero">
+        <p class="hero-lead" data-i18n="hero.lead">题目来自量化交易系统的真实事故，按修复前形态重建并脱敏。这里衡量模型能否安全地实现和维护交易系统；模型自己会不会交易，不在评测范围内。</p>
+        <p class="hero-note" data-i18n="hero.note">质量越高越好；每题成本和每题耗时越低越好。</p>
+      </div>
+
+      <section class="report-section" id="core">
+        <div class="section-head"><h2 data-i18n="section.core.title">核心指标</h2></div>
+        <figure class="chart chart-full" data-chart="quality"><figcaption><h3 data-i18n="chart.quality.title">总分</h3><p data-i18n="chart.quality.note">五项可用指标等权平均，越高越好。</p></figcaption><div class="chart-frame" data-orientation="vertical"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" role="img" data-orientation="vertical" data-i18n-aria="chart.quality.title" aria-label="总分" class="chart-svg"><line x1="48.0" y1="206.0" x2="982.0" y2="206.0" class="grid-line"/><text x="41.0" y="209.5" class="axis-text axis-y">0.000</text><line x1="48.0" y1="161.0" x2="982.0" y2="161.0" class="grid-line"/><text x="41.0" y="164.5" class="axis-text axis-y">0.250</text><line x1="48.0" y1="116.0" x2="982.0" y2="116.0" class="grid-line"/><text x="41.0" y="119.5" class="axis-text axis-y">0.500</text><line x1="48.0" y1="71.0" x2="982.0" y2="71.0" class="grid-line"/><text x="41.0" y="74.5" class="axis-text axis-y">0.750</text><line x1="48.0" y1="26.0" x2="982.0" y2="26.0" class="grid-line"/><text x="41.0" y="29.5" class="axis-text axis-y">1.000</text><line x1="48.0" y1="206.0" x2="982.0" y2="206.0" class="axis-line"/><text x="48.0" y="18.0" class="axis-text axis-unit" data-i18n="unit.score">分</text><rect x="142.8" y="75.6" width="44.0" height="130.4" fill="#86b96e" class="bar"/><text x="164.8" y="70.6" class="value-text" text-anchor="middle">0.724</text><text x="164.8" y="222.0" class="axis-text model-label" text-anchor="middle">GLM-5.3 Flash</text><rect x="376.2" y="82.6" width="44.0" height="123.4" fill="#9b8fd6" class="bar"/><text x="398.2" y="77.6" class="value-text" text-anchor="middle">0.686</text><text x="398.2" y="222.0" class="axis-text model-label" text-anchor="middle">HY4 Flash</text><rect x="609.8" y="85.8" width="44.0" height="120.2" fill="#5c9fd6" class="bar"/><text x="631.8" y="80.8" class="value-text" text-anchor="middle">0.668</text><text x="631.8" y="222.0" class="axis-text model-label" text-anchor="middle">DeepSeek V4.1 Flash</text><rect x="843.2" y="91.9" width="44.0" height="114.1" fill="#d1a44e" class="bar"/><text x="865.2" y="86.9" class="value-text" text-anchor="middle">0.634</text><text x="865.2" y="222.0" class="axis-text model-label" text-anchor="middle">SWE-2 Flash</text></svg></div></figure>
+        <figure class="chart chart-full" data-chart="cost_usd"><figcaption><h3 data-i18n="chart.cost_usd.title">每题美元成本</h3><p data-i18n="chart.cost_usd.note">每题美元成本按官方单价折算，越低越好。</p></figcaption><div class="chart-frame" data-orientation="vertical"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" role="img" data-orientation="vertical" data-i18n-aria="chart.cost_usd.title" aria-label="每题美元成本" class="chart-svg"><line x1="48.0" y1="206.0" x2="982.0" y2="206.0" class="grid-line"/><text x="41.0" y="209.5" class="axis-text axis-y">0</text><line x1="48.0" y1="161.0" x2="982.0" y2="161.0" class="grid-line"/><text x="41.0" y="164.5" class="axis-text axis-y">0.0125</text><line x1="48.0" y1="116.0" x2="982.0" y2="116.0" class="grid-line"/><text x="41.0" y="119.5" class="axis-text axis-y">0.025</text><line x1="48.0" y1="71.0" x2="982.0" y2="71.0" class="grid-line"/><text x="41.0" y="74.5" class="axis-text axis-y">0.0375</text><line x1="48.0" y1="26.0" x2="982.0" y2="26.0" class="grid-line"/><text x="41.0" y="29.5" class="axis-text axis-y">0.05</text><line x1="48.0" y1="206.0" x2="982.0" y2="206.0" class="axis-line"/><text x="48.0" y="18.0" class="axis-text axis-unit" data-i18n="unit.usd_task">美元/题</text><rect x="142.8" y="173.2" width="44.0" height="32.8" fill="#9b8fd6" class="bar"/><text x="164.8" y="168.2" class="value-text" text-anchor="middle">0.00912</text><text x="164.8" y="222.0" class="axis-text model-label" text-anchor="middle">HY4 Flash</text><rect x="376.2" y="114.3" width="44.0" height="91.7" fill="#86b96e" class="bar"/><text x="398.2" y="109.3" class="value-text" text-anchor="middle">0.0255</text><text x="398.2" y="222.0" class="axis-text model-label" text-anchor="middle">GLM-5.3 Flash</text><rect x="609.8" y="92.2" width="44.0" height="113.8" fill="#d1a44e" class="bar"/><text x="631.8" y="87.2" class="value-text" text-anchor="middle">0.0316</text><text x="631.8" y="222.0" class="axis-text model-label" text-anchor="middle">SWE-2 Flash</text><rect x="843.2" y="51.2" width="44.0" height="154.8" fill="#5c9fd6" class="bar"/><text x="865.2" y="46.2" class="value-text" text-anchor="middle">0.043</text><text x="865.2" y="222.0" class="axis-text model-label" text-anchor="middle">DeepSeek V4.1 Flash</text></svg></div></figure>
+        <figure class="chart chart-full" data-chart="speed"><figcaption><h3 data-i18n="chart.speed.title">每题耗时</h3><p data-i18n="chart.speed.note">每题答题用时的平均秒数，越低越好。</p></figcaption><div class="chart-frame" data-orientation="vertical"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" role="img" data-orientation="vertical" data-i18n-aria="chart.speed.title" aria-label="每题耗时" class="chart-svg"><line x1="48.0" y1="206.0" x2="982.0" y2="206.0" class="grid-line"/><text x="41.0" y="209.5" class="axis-text axis-y">0</text><line x1="48.0" y1="161.0" x2="982.0" y2="161.0" class="grid-line"/><text x="41.0" y="164.5" class="axis-text axis-y">375</text><line x1="48.0" y1="116.0" x2="982.0" y2="116.0" class="grid-line"/><text x="41.0" y="119.5" class="axis-text axis-y">750</text><line x1="48.0" y1="71.0" x2="982.0" y2="71.0" class="grid-line"/><text x="41.0" y="74.5" class="axis-text axis-y">1,125</text><line x1="48.0" y1="26.0" x2="982.0" y2="26.0" class="grid-line"/><text x="41.0" y="29.5" class="axis-text axis-y">1,500</text><line x1="48.0" y1="206.0" x2="982.0" y2="206.0" class="axis-line"/><text x="48.0" y="18.0" class="axis-text axis-unit" data-i18n="unit.seconds_task">秒/题</text><rect x="142.8" y="188.2" width="44.0" height="17.8" fill="#9b8fd6" class="bar"/><text x="164.8" y="183.2" class="value-text" text-anchor="middle">149</text><text x="164.8" y="222.0" class="axis-text model-label" text-anchor="middle">HY4 Flash</text><rect x="376.2" y="183.4" width="44.0" height="22.6" fill="#5c9fd6" class="bar"/><text x="398.2" y="178.4" class="value-text" text-anchor="middle">188</text><text x="398.2" y="222.0" class="axis-text model-label" text-anchor="middle">DeepSeek V4.1 Flash</text><rect x="609.8" y="175.1" width="44.0" height="30.9" fill="#d1a44e" class="bar"/><text x="631.8" y="170.1" class="value-text" text-anchor="middle">257</text><text x="631.8" y="222.0" class="axis-text model-label" text-anchor="middle">SWE-2 Flash</text><rect x="843.2" y="80.7" width="44.0" height="125.3" fill="#86b96e" class="bar"/><text x="865.2" y="75.7" class="value-text" text-anchor="middle">1,044</text><text x="865.2" y="222.0" class="axis-text model-label" text-anchor="middle">GLM-5.3 Flash</text></svg></div></figure>
+      </section>
+
+      <section class="report-section" id="top10">
+        <div class="section-head"><h2 data-i18n="home.top.title">前 10 名</h2><p class="section-note" data-i18n="home.top.note">五项指标齐全的模型按总分排序，完整榜单在排行榜页。</p></div>
+        
+    <div class="table-wrap">
+      <table class="rank-table">
+        <caption class="sr-only" data-i18n="home.top.caption">最新题库版本的前 10 名。</caption>
+        
+        <colgroup>
+          <col class="col-rank"><col class="col-model"><col class="col-total">
+          <col class="col-value"><col class="col-seconds">
+        </colgroup>
+
+        <thead><tr><th class="rank-head" title="五项指标齐全的模型按总分从高到低排名；只测了部分题型的模型不参与名次。" data-i18n-title="table.rank_hint" data-i18n="table.rank">名次</th><th title="模型名和厂商；点模型名展开明细。" data-i18n-title="table.model_hint" data-i18n="table.model">模型</th><th class="num" title="五项可用指标的等权平均，范围 0–1，越高越好。" data-i18n-title="table.total_hint" data-i18n="table.total">总分</th><th class="num" title="总分除以每题美元成本；没有官方单价时显示“无官方价”。" data-i18n-title="table.value_hint" data-i18n="table.value">每美元得分</th><th class="num" title="每题答题用时的平均秒数，含服务限流；没有记录时显示“未测”。" data-i18n-title="table.seconds_hint" data-i18n="table.seconds">每题耗时（秒）</th></tr></thead>
+        <tbody>
+        <tr class="model-row">
+          <td class="rank-cell">1</td>
+          <td class="model-cell">
+            <a href="models/glm-5.3-flash.html">GLM-5.3 Flash</a>
+            <span class="vendor">Zhipu AI</span>
+          </td>
+          <td class="num total-cell">0.724</td>
+          <td class="num">28.43</td>
+          <td class="num">1,044</td>
+        </tr>
+        
+        <tr class="model-row">
+          <td class="rank-cell">2</td>
+          <td class="model-cell">
+            <a href="models/hy4-flash.html">HY4 Flash</a>
+            <span class="vendor">Tencent</span>
+          </td>
+          <td class="num total-cell">0.686</td>
+          <td class="num">75.18</td>
+          <td class="num">149</td>
+        </tr>
+        
+        <tr class="model-row">
+          <td class="rank-cell">3</td>
+          <td class="model-cell">
+            <a href="models/deepseek-v4.1-flash.html">DeepSeek V4.1 Flash</a>
+            <span class="vendor">DeepSeek</span>
+          </td>
+          <td class="num total-cell">0.668</td>
+          <td class="num">15.52</td>
+          <td class="num">188</td>
+        </tr>
+        
+        <tr class="model-row">
+          <td class="rank-cell">4</td>
+          <td class="model-cell">
+            <a href="models/swe-2-flash.html">SWE-2 Flash</a>
+            <span class="vendor">Cognition</span>
+          </td>
+          <td class="num total-cell">0.634</td>
+          <td class="num">20.06</td>
+          <td class="num">257</td>
+        </tr>
+        </tbody>
+      </table>
+      
+    </div>
+    
+        <p class="more-link"><a href="leaderboard.html" data-i18n="home.top.link">查看完整排名</a></p>
+      </section>
+
+      <section class="report-section" id="sections">
+        <div class="section-head"><h2 data-i18n="home.sections.title">板块</h2></div>
+        <div class="entry-grid"><article class="entry"><h3><a href="leaderboard.html" data-i18n="nav.leaderboard">排行榜</a></h3><p data-i18n="home.entry.leaderboard.desc">完整排名，按列排序、按厂商筛选，可展开明细。</p></article><article class="entry"><h3><a href="models/index.html" data-i18n="nav.models">模型</a></h3><p data-i18n="home.entry.models.desc">每个模型的各项得分、成本构成和全部题库版本。</p></article><article class="entry"><h3><a href="compare.html" data-i18n="nav.compare">对比</a><span class="badge-coming" data-i18n="compare.coming">即将推出</span></h3><p data-i18n="home.entry.compare.desc">选 2–4 个模型并排查看各项指标。</p></article><article class="entry"><h3><a href="methodology.html" data-i18n="nav.methodology">方法</a></h3><p data-i18n="home.entry.methodology.desc">测什么、怎么评分、成本口径与官方单价。</p></article><article class="entry"><h3><a href="contribute.html" data-i18n="nav.contribute">贡献题目</a></h3><p data-i18n="home.entry.contribute.desc">收什么题、脱敏要求和提交步骤。</p></article></div>
+      </section>
+    </main>
+
+      <footer class="page-footer">
+        <div>
+          <span class="footer-label" data-i18n="footer.matrix">同一作者的其他项目</span>
+          <p><a href="https://github.com/liuyejinghong/field-lab"><strong data-i18n="footer.fieldlab.name">实战工坊 Field Lab</strong></a>
+            <span data-i18n="footer.fieldlab.desc">从实战中整理出的通用 Agent 工具，例如代码审查标准、可维护性记分卡。</span></p>
+          <p><a href="https://github.com/liuyejinghong/field-lab" class="footer-link" data-i18n="footer.fieldlab.link">github.com/liuyejinghong/field-lab</a></p>
+        </div>
+        <div class="footer-note">
+          <p data-i18n="footer.private">题目与评分材料不公开，避免进入训练数据或被针对性优化。</p>
+          <p class="footer-version"><span data-i18n="footer.site_version">网站</span> v1.0.0 · <span data-i18n="footer.bench_version">题库</span> 0.2.0</p>
+        </div>
+      </footer>
+    </div>
+<script src="assets/i18n.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

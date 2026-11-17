@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title data-i18n="page.methodology.title">Tripwire Bench · 方法</title>
+<meta name="description" content="量化交易系统 coding benchmark：用真实事故重建的题目，衡量哪个模型最适合实现和维护交易系统。" data-i18n-content="page.description">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">跳到正文</a>
+<div class="page">
+
+      <header class="masthead">
+        <div class="brand">
+          <div class="brand-title"><a class="brand-link" href="index.html"><span data-i18n="brand.name">Tripwire Bench</span></a><span class="brand-alias" data-i18n="brand.alias">踩雷榜</span></div>
+          <p class="brand-subtitle" data-i18n="brand.subtitle">量化交易系统 coding benchmark——哪个模型最适合写交易系统</p>
+        </div>
+        <div class="controls">
+          
+          <div class="control"><span data-i18n="controls.language">语言</span><div class="lang-switch" role="group" aria-label="切换语言" data-i18n-aria="controls.language_aria"><button type="button" class="lang-button" data-lang="zh" aria-pressed="true">中文</button><button type="button" class="lang-button" data-lang="en" aria-pressed="false">English</button></div></div>
+        </div>
+      </header>
+    <nav class="site-nav" aria-label="主导航" data-i18n-aria="nav.label"><a href="index.html" data-i18n="nav.home">首页</a><a href="leaderboard.html" data-i18n="nav.leaderboard">排行榜</a><a href="models/index.html" data-i18n="nav.models">模型</a><a href="compare.html" data-i18n="nav.compare">对比</a><a href="methodology.html" aria-current="page" data-i18n="nav.methodology">方法</a><a href="contribute.html" data-i18n="nav.contribute">贡献题目</a></nav><div class="updated-line"><span data-i18n="meta.updated">更新于</span> <time datetime="2026-11-17">2026-11-17</time></div>
+<main id="main"><h1 class="page-title" data-i18n="nav.methodology">方法</h1>
+      <section class="report-section" id="tasks">
+        <div class="section-head"><h2 data-i18n="section.tasks.title">测什么</h2><p class="section-note" data-i18n="section.tasks.note">三类任务，两档难度。题目标题、编号、题面和评分标准不公开。</p></div>
+        <div class="task-kind-grid">
+          <div><h3 class="subhead" data-i18n="tasks.type_header">题型</h3>
+            <div class="kind-list"><article class="kind-item"><div class="kind-head"><h3 data-i18n="tasktype.fix.name">修复</h3><span class="kind-count">9<span class="stat-unit" data-i18n="unit.tasks">道</span></span></div><p data-i18n="tasktype.fix.desc">给一段可运行的最小交易场景，要求修掉根因。隐藏测试判定有没有解决，并检查公开测试是否被改动。</p></article><article class="kind-item"><div class="kind-head"><h3 data-i18n="tasktype.review.name">审查</h3><span class="kind-count">9<span class="stat-unit" data-i18n="unit.tasks">道</span></span></div><p data-i18n="tasktype.review.desc">给一份仍含雷的候选修复 diff，要求找出根因、可达失败路径和最小修法。按找全标准答案的程度计分，误报和过度防御扣分。</p></article><article class="kind-item"><div class="kind-head"><h3 data-i18n="tasktype.optimize.name">优化</h3><span class="kind-count">6<span class="stat-unit" data-i18n="unit.tasks">道</span></span></div><p data-i18n="tasktype.optimize.desc">从已经正确的参考实现出发，要求保持行为不变地降低复杂度。</p></article></div></div>
+          <div><h3 class="subhead" data-i18n="tasks.track_header">难度档</h3>
+            <div class="kind-list"><article class="kind-item"><div class="kind-head"><h3 data-i18n="track.guided.name">有提示</h3><span class="kind-count">10<span class="stat-unit" data-i18n="unit.tasks">道</span></span></div><p data-i18n="track.guided.desc">任务说明给出业务目标、边界和不变量，相当于任务已经有人拆好，只考执行。</p></article><article class="kind-item"><div class="kind-head"><h3 data-i18n="track.open.name">无提示</h3><span class="kind-count">10<span class="stat-unit" data-i18n="unit.tasks">道</span></span></div><p data-i18n="track.open.desc">只给现场症状或一句审查要求，相当于没人先拆解任务，考自己定位问题。</p></article></div></div>
+        </div>
+        <h3 class="subhead" data-i18n="tasks.tag_header">题材标签</h3>
+        <p class="section-note" data-i18n="tasks.tag_note">按当前题库统计；同一题可属于多个标签。</p>
+        <ul class="tag-grid"><li class="tag-item"><span data-i18n="tags.state_source_of_truth">状态与事实来源</span><span class="tag-count">4</span></li><li class="tag-item"><span data-i18n="tags.order_identity_unknown">订单身份与结果未知</span><span class="tag-count">3</span></li><li class="tag-item"><span data-i18n="tags.idempotency_concurrency">幂等与并发</span><span class="tag-count">2</span></li><li class="tag-item"><span data-i18n="tags.position_quantity">仓位与数量</span><span class="tag-count">1</span></li><li class="tag-item"><span data-i18n="tags.stop_protection">止损与保护</span><span class="tag-count">2</span></li><li class="tag-item"><span data-i18n="tags.cross_layer_wiring">跨层接线</span><span class="tag-count">3</span></li><li class="tag-item"><span data-i18n="tags.refactor_completeness">重构完整性</span><span class="tag-count">1</span></li><li class="tag-item"><span data-i18n="tags.long_short_symmetry">多空对称</span><span class="tag-count">1</span></li><li class="tag-item"><span data-i18n="tags.failure_monitoring">故障语义与监控</span><span class="tag-count">2</span></li><li class="tag-item"><span data-i18n="tags.release_safety">发布安全</span><span class="tag-count">2</span></li></ul>
+      </section>
+    
+      <section class="report-section" id="method">
+        <div class="section-head"><h2 data-i18n="section.method.title">评分与成本</h2></div>
+        <div class="method-grid">
+          <article class="method-block">
+            <h3 data-i18n="method.scoring.title">计分</h3>
+            <p data-i18n="method.scoring.body">总分取五项可用指标的等权平均：修复有提示、修复无提示、审查有提示、审查无提示、优化。修复与优化按是否解决计 0 或 1 分；审查按评分模型打 0–1 分。缺项跳过，不按 0 计。</p>
+          </article>
+          <article class="method-block">
+            <h3 data-i18n="method.grading.title">评分</h3>
+            <p data-i18n="method.grading.body">修复与优化跑隐藏测试：FAIL_TO_PASS 与 PASS_TO_PASS 全部通过，且没有改动公开测试，才算解决。审查由不参与答题的评分模型打分：标准答案找全多少，误报和过度防御有多少。</p>
+          </article>
+          <article class="method-block">
+            <h3 data-i18n="method.cost.title">成本</h3>
+            <p data-i18n="method.cost.body">每题成本把输入、输出、缓存读取、缓存写入的 token 分别乘以官方单价再求和。只算答题模型的用量，不含评分模型。查不到官方单价的模型不计成本。</p>
+          </article>
+          <article class="method-block">
+            <h3 data-i18n="method.version.title">版本</h3>
+            <p data-i18n="method.version.body">题库版本变化后不与旧版本直接比较；页面按版本分开统计。</p>
+          </article>
+        </div>
+        <details class="formula">
+          <summary data-i18n="method.formula">计分与成本公式</summary>
+          <p data-i18n="method.formula_score">总分 = 可用项之和 ÷ 可用项数；可用项为修复有提示、修复无提示、审查有提示、审查无提示、优化。</p>
+          <p data-i18n="method.formula_cost">每题成本（美元） = Σ(token_i × 单价_i) ÷ 1,000,000。</p>
+        </details>
+        <h3 class="subhead" data-i18n="method.price_table">官方单价</h3>
+        <p class="section-note"><span data-i18n="method.price_as_of">查询日期</span>:
+          <span>2026-11-17</span>.
+          <span data-i18n="method.price_scope">只列出现在结果里的模型；同一模型只列一行。</span>
+          <span data-i18n="method.price_note">单价单位为美元/百万 token。成本按官方单价折算，不是实际支出。</span></p>
+        <p class="price-basis" data-i18n="method.price_basis">计价规则：按官方单价计，不计限时促销；厂商没有单列缓存写入价时，按输入价计；DeepSeek 取高峰（标准）价；长上下文分档不加价，按基础价计；人民币价按查询日中间价折算成美元。</p>
+        
+      <div class="table-wrap">
+        <table class="price-table">
+          <colgroup>
+            <col class="price-col-model">
+            <col class="price-col-num"><col class="price-col-num">
+            <col class="price-col-num"><col class="price-col-num">
+            <col class="price-col-source">
+          </colgroup>
+          <thead><tr>
+            <th data-i18n="method.price_model">模型</th>
+            <th class="num" data-i18n="method.price_input">输入</th>
+            <th class="num" data-i18n="method.price_output">输出</th>
+            <th class="num" data-i18n="method.price_cache_read">缓存读取</th>
+            <th class="num" data-i18n="method.price_cache_write">缓存写入</th>
+            <th data-i18n="method.price_source">来源</th>
+          </tr></thead>
+          <tbody><tr><td><span class="price-model">DeepSeek V4.1 Flash</span><span class="vendor">DeepSeek</span></td><td class="num">0.3</td><td class="num">1.2</td><td class="num">0.006</td><td class="num">0.3</td><td class="price-source"><a href="https://api-docs.deepseek.com/quick_start/pricing">https://api-docs.deepseek.com/quick_start/pricing</a></td></tr><tr><td><span class="price-model">Gemini 4 Carbon</span><span class="vendor">Google</span></td><td class="num">2</td><td class="num">10</td><td class="num">0.1</td><td class="num">2</td><td class="price-source"><a href="https://aistudio.google.com/docs/pricing">https://aistudio.google.com/docs/pricing</a> <a href="https://ai.google.dev/gemini-api/docs/pricing">https://ai.google.dev/gemini-api/docs/pricing</a></td></tr><tr><td><span class="price-model">Gemini 4 Hydrogen</span><span class="vendor">Google</span></td><td class="num">1.5</td><td class="num">7.5</td><td class="num">0.075</td><td class="num">1.5</td><td class="price-source"><a href="https://aistudio.google.com/docs/pricing">https://aistudio.google.com/docs/pricing</a> <a href="https://artificialanalysis.ai/models/gemini-4-hydrogen">https://artificialanalysis.ai/models/gemini-4-hydrogen</a></td></tr><tr><td><span class="price-model">GLM-5.3</span><span class="vendor">Zhipu AI</span></td><td class="num">1.4</td><td class="num">4.4</td><td class="num">0.26</td><td class="num">1.4</td><td class="price-source"><a href="https://docs.z.ai/guides/overview/pricing">https://docs.z.ai/guides/overview/pricing</a> <a href="https://open.bigmodel.cn/pricing">https://open.bigmodel.cn/pricing</a> <a href="https://artificialanalysis.ai/models/glm-5-3">https://artificialanalysis.ai/models/glm-5-3</a></td></tr><tr><td><span class="price-model">GLM-5.3 Flash</span><span class="vendor">Zhipu AI</span></td><td class="num">0.15</td><td class="num">0.5</td><td class="num">0.03</td><td class="num">0.15</td><td class="price-source"><a href="https://docs.z.ai/guides/overview/pricing">https://docs.z.ai/guides/overview/pricing</a> <a href="https://open.bigmodel.cn/pricing">https://open.bigmodel.cn/pricing</a> <a href="https://artificialanalysis.ai/models/glm-5-3-flash">https://artificialanalysis.ai/models/glm-5-3-flash</a></td></tr><tr><td><span class="price-model">GPT-6.1 Terra</span><span class="vendor">OpenAI</span></td><td class="num">1</td><td class="num">5</td><td class="num">0.05</td><td class="num">1.25</td><td class="price-source"><a href="https://developers.openai.com/api/docs/pricing">https://developers.openai.com/api/docs/pricing</a> <a href="https://platform.openai.com/docs/pricing">https://platform.openai.com/docs/pricing</a></td></tr><tr><td><span class="price-model">HY4 Flash</span><span class="vendor">Tencent</span></td><td class="num">0.07448</td><td class="num">0.2979</td><td class="num">0.002979</td><td class="num">0.07448</td><td class="price-source"><a href="https://hy.tencent.com/research/hy4-flash">https://hy.tencent.com/research/hy4-flash</a> <a href="https://cloud.tencent.com/act/pro/tokenplan">https://cloud.tencent.com/act/pro/tokenplan</a> <a href="https://www.tencent.com/tencent-launches-hy4-flash-to-power-high-speed-cost-efficient-ai-deployment-for-everyday-workflows/">https://www.tencent.com/tencent-launches-hy4-flash-to-power-high-speed-cost-efficient-ai-deployment-for-everyday-workflows/</a></td></tr><tr><td><span class="price-model">SWE-2</span><span class="vendor">Cognition</span></td><td class="num">3</td><td class="num">15</td><td class="num">0.3</td><td class="num">3</td><td class="price-source"><a href="https://docs.devin.ai/windsurf/plugins/cascade/models">https://docs.devin.ai/windsurf/plugins/cascade/models</a> <a href="https://docs.devin.ai/desktop/models">https://docs.devin.ai/desktop/models</a></td></tr><tr><td><span class="price-model">SWE-2 Flash</span><span class="vendor">Cognition</span></td><td class="num">0.1</td><td class="num">0.5</td><td class="num">0.01</td><td class="num">0.125</td><td class="price-source"><a href="https://docs.devin.ai/windsurf/plugins/cascade/models">https://docs.devin.ai/windsurf/plugins/cascade/models</a> <a href="https://docs.devin.ai/desktop/models">https://docs.devin.ai/desktop/models</a> <a href="https://cognition.com/blog/swe-2-flash">https://cognition.com/blog/swe-2-flash</a></td></tr></tbody>
+        </table>
+      </div>
+    
+      </section>
+    </main>
+
+      <footer class="page-footer">
+        <div>
+          <span class="footer-label" data-i18n="footer.matrix">同一作者的其他项目</span>
+          <p><a href="https://github.com/liuyejinghong/field-lab"><strong data-i18n="footer.fieldlab.name">实战工坊 Field Lab</strong></a>
+            <span data-i18n="footer.fieldlab.desc">从实战中整理出的通用 Agent 工具，例如代码审查标准、可维护性记分卡。</span></p>
+          <p><a href="https://github.com/liuyejinghong/field-lab" class="footer-link" data-i18n="footer.fieldlab.link">github.com/liuyejinghong/field-lab</a></p>
+        </div>
+        <div class="footer-note">
+          <p data-i18n="footer.private">题目与评分材料不公开，避免进入训练数据或被针对性优化。</p>
+          <p class="footer-version"><span data-i18n="footer.site_version">网站</span> v1.0.0 · <span data-i18n="footer.bench_version">题库</span> 0.2.0</p>
+        </div>
+      </footer>
+    </div>
+<script src="assets/i18n.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
