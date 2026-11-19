@@ -25,7 +25,7 @@
     <nav class="site-nav" aria-label="主导航" data-i18n-aria="nav.label"><a href="index.html" data-i18n="nav.home">首页</a><a href="leaderboard.html" data-i18n="nav.leaderboard">排行榜</a><a href="models/index.html" data-i18n="nav.models">模型</a><a href="compare.html" data-i18n="nav.compare">对比</a><a href="methodology.html" aria-current="page" data-i18n="nav.methodology">方法</a><a href="contribute.html" data-i18n="nav.contribute">贡献题目</a></nav><div class="updated-line"><span data-i18n="meta.updated">更新于</span> <time datetime="2026-11-19">2026-11-19</time></div>
 <main id="main"><h1 class="page-title" data-i18n="nav.methodology">方法</h1>
       <section class="report-section" id="tasks">
-        <div class="section-head"><h2 data-i18n="section.tasks.title">测什么</h2><p class="section-note" data-i18n="section.tasks.note">三类任务，两档难度。题目标题、编号、题面和评分标准不公开。</p></div>
+        <div class="section-head"><h2 data-i18n="section.tasks.title">测什么</h2><p class="section-note" data-i18n="section.tasks.note">四类任务，两档难度。题目标题、编号、题面和评分标准不公开。</p></div>
         <h3 class="subhead" data-i18n="tasks.about_title">题库构成</h3>
         <p class="section-note" data-i18n="tasks.about_source">题目全部来自一套 7×24 实盘加密货币交易系统的真实事故，这些错误都反复出现过。每道题还原成“修复前”的样子，改成通用名称，缩小成几百行、可以确定复现的场景。</p>
         <p class="section-note" data-i18n="tasks.about_scope">测的是实盘交易系统的工程可靠性：订单的生命周期、状态与事实来源、故障处理、仓位与保护，以及改代码时是否改全。不评判策略本身能否赚钱，也不测选因子或预测行情。</p>
@@ -33,7 +33,7 @@
         <p class="section-note" data-i18n="tasks.about_caveat">题量还不大，总分相差很小的模型，排名先后不一定有意义。</p>
         <div class="task-kind-grid">
           <div><h3 class="subhead" data-i18n="tasks.type_header">题型</h3>
-            <div class="kind-list"><article class="kind-item"><div class="kind-head"><h3 data-i18n="tasktype.fix.name">修复</h3><span class="kind-count">15<span class="stat-unit" data-i18n="unit.tasks">道</span></span></div><p data-i18n="tasktype.fix.desc">给一段可运行的最小交易场景，要求修掉根因。隐藏测试判定有没有解决，并检查公开测试是否被改动。</p></article><article class="kind-item"><div class="kind-head"><h3 data-i18n="tasktype.review.name">审查</h3><span class="kind-count">15<span class="stat-unit" data-i18n="unit.tasks">道</span></span></div><p data-i18n="tasktype.review.desc">给一份仍含雷的候选修复 diff，要求找出根因、可达失败路径和最小修法。按找全标准答案的程度计分，误报和过度防御扣分。</p></article><article class="kind-item"><div class="kind-head"><h3 data-i18n="tasktype.optimize.name">优化</h3><span class="kind-count">6<span class="stat-unit" data-i18n="unit.tasks">道</span></span></div><p data-i18n="tasktype.optimize.desc">从已经正确的参考实现出发，要求保持行为不变地降低复杂度。</p></article></div></div>
+            <div class="kind-list"><article class="kind-item"><div class="kind-head"><h3 data-i18n="tasktype.fix.name">修复</h3><span class="kind-count">15<span class="stat-unit" data-i18n="unit.tasks">道</span></span></div><p data-i18n="tasktype.fix.desc">给一段可运行的最小交易场景，要求修掉根因。隐藏测试判定有没有解决，并检查公开测试是否被改动。</p></article><article class="kind-item"><div class="kind-head"><h3 data-i18n="tasktype.review.name">审查</h3><span class="kind-count">15<span class="stat-unit" data-i18n="unit.tasks">道</span></span></div><p data-i18n="tasktype.review.desc">给一份仍含雷的候选修复 diff，要求找出根因、可达失败路径和最小修法。按找全标准答案的程度计分，误报和过度防御扣分。</p></article><article class="kind-item"><div class="kind-head"><h3 data-i18n="tasktype.optimize.name">优化</h3><span class="kind-count">6<span class="stat-unit" data-i18n="unit.tasks">道</span></span></div><p data-i18n="tasktype.optimize.desc">从已经正确的参考实现出发，要求保持行为不变地降低复杂度。</p></article><article class="kind-item"><div class="kind-head"><h3 data-i18n="tasktype.implement.name">实现</h3><span class="kind-count">0<span class="stat-unit" data-i18n="unit.tasks">道</span></span></div><p data-i18n="tasktype.implement.desc">按书面策略规格实现代码，在确定性行情数据上匹配参考实现的交易动作。</p></article></div></div>
           <div><h3 class="subhead" data-i18n="tasks.track_header">难度档</h3>
             <div class="kind-list"><article class="kind-item"><div class="kind-head"><h3 data-i18n="track.guided.name">有提示</h3><span class="kind-count">16<span class="stat-unit" data-i18n="unit.tasks">道</span></span></div><p data-i18n="track.guided.desc">任务说明给出业务目标、边界和不变量，相当于任务已经有人拆好，只考执行。</p></article><article class="kind-item"><div class="kind-head"><h3 data-i18n="track.open.name">无提示</h3><span class="kind-count">16<span class="stat-unit" data-i18n="unit.tasks">道</span></span></div><p data-i18n="track.open.desc">只给现场症状或一句审查要求，相当于没人先拆解任务，考自己定位问题。</p></article></div></div>
         </div>
@@ -47,11 +47,11 @@
         <div class="method-grid">
           <article class="method-block">
             <h3 data-i18n="method.scoring.title">计分</h3>
-            <p data-i18n="method.scoring.body">总分取五项可用指标的等权平均：修复有提示、修复无提示、审查有提示、审查无提示、优化。修复与优化按是否解决计 0 或 1 分；审查按评分模型打 0–1 分。缺项跳过，不按 0 计。</p>
+            <p data-i18n="method.scoring.body">总分取各项可用指标的等权平均：修复有提示、修复无提示、审查有提示、审查无提示、优化和实现。修复与优化按是否解决计 0 或 1 分；审查按评分模型打 0–1 分；实现逐根 K 线比对交易动作。缺项跳过，不按 0 计。</p>
           </article>
           <article class="method-block">
             <h3 data-i18n="method.grading.title">评分</h3>
-            <p data-i18n="method.grading.body">修复与优化跑隐藏测试：FAIL_TO_PASS 与 PASS_TO_PASS 全部通过，且没有改动公开测试，才算解决。审查由不参与答题的评分模型打分：标准答案找全多少，误报和过度防御有多少。</p>
+            <p data-i18n="method.grading.body">修复与优化跑隐藏测试：FAIL_TO_PASS 与 PASS_TO_PASS 全部通过，且没有改动公开测试，才算解决。审查由不参与答题的评分模型打分：标准答案找全多少，误报和过度防御有多少。实现用确定性行情数据回放，并逐根比对交易动作。</p>
             <p class="section-note"><span data-i18n="method.grader_model">评分模型</span>:
               <span>gpt-6.2-sol</span></p>
           </article>
@@ -67,7 +67,7 @@
         </div>
         <details class="formula">
           <summary data-i18n="method.formula">计分与成本公式</summary>
-          <p data-i18n="method.formula_score">总分 = 可用项之和 ÷ 可用项数；可用项为修复有提示、修复无提示、审查有提示、审查无提示、优化。</p>
+          <p data-i18n="method.formula_score">总分 = 可用项之和 ÷ 可用项数；可用项为修复有提示、修复无提示、审查有提示、审查无提示、优化和实现。</p>
           <p data-i18n="method.formula_cost">每题成本（美元） = Σ(token_i × 单价_i) ÷ 1,000,000。</p>
         </details>
         <h3 class="subhead" data-i18n="method.price_table">官方单价</h3>
@@ -109,7 +109,7 @@
         </div>
         <div class="footer-note">
           <p data-i18n="footer.private">题目与评分材料不公开，避免进入训练数据或被针对性优化。</p>
-          <p class="footer-version"><span data-i18n="footer.site_version">网站</span> v1.2.0 · <span data-i18n="footer.bench_version">题库</span> 0.3.0</p>
+          <p class="footer-version"><span data-i18n="footer.site_version">网站</span> v1.2.1 · <span data-i18n="footer.bench_version">题库</span> 0.3.0</p>
         </div>
       </footer>
     </div>
