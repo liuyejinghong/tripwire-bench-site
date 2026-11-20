@@ -1035,3 +1035,8 @@ button.expand[aria-expanded="true"] .chevron::after { display: none; }
   .cost-table th, .cost-table td,
   .version-table th, .version-table td { padding: 7px 6px; font-size: .76rem; }
 }
+
+.radar-grid { fill: none; stroke: var(--grid); stroke-width: 1; }
+.radar-axis { stroke: var(--rule-strong); stroke-width: 1; }
+.radar-polygon { stroke-width: 2; }
+.legend-text { fill: var(--ink-2); font-size: 12px; }

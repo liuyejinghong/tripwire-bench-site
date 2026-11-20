@@ -139,7 +139,7 @@
     });
     if (!pairs.length) { return; }
 
-    var defaults = { rank: 1, total: -1, value: -1, seconds: 1 };
+    var defaults = { rank: 1, total: -1, value: -1, efficiency: -1, seconds: 1 };
     var sortKey = "rank";
     var direction = 1;
 
